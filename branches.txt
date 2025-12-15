@@ -1,2 +1,3 @@
-This file is to explore branching in git
-Subtracting a new line to this file
+Changing the content of this file to create conflict
+Also changing this liney
+
