@@ -39,3 +39,6 @@ for R1 in ${CUTADAPT_DIR}/*_1_trimmed.fastq; do
     echo "Bam generated and Sorting $SAMPLE is running"
     samtools sort $BAM_FILES/$SAMPLE.bam -o $SORTED_BAM/$SAMPLE.sorted.bam
     echo "Sorting completed and Indexing $SAMPLE is running
+    echo " Name sorting completed and  fixmate $SAMPLE running"
+    samtools fixmate -m $NAME_SORTED/$SAMPLE.name_sorted.bam $FIXMATE/$SAMPLE.fixmate.bam
+    echo " Fixmate completed and  sorting $SAMPLE started"
